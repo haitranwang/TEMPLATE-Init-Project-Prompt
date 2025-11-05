@@ -290,7 +290,7 @@ JWT_ISSUER=your-project-local
 NATS_URL=nats://localhost:4222
 ```
 
-**env/docker.env**, **env/staging.env**, **env/prod.env** - Similar structure with environment-specific values.
+**env/docker.env**, **env/local.env**, **env/unstable.env**, **env/staging.env**, **env/prod.env** - Similar structure with environment-specific values.
 
 ### Configuration Structures
 
@@ -591,7 +591,7 @@ Create `gqlgen.yml`:
 schema:
   - internal/controller/graphql/*.graphqls
   - internal/controller/graphql/schemas/*.gql
-
+/**/
 exec:
   filename: internal/controller/graphql/generated.go
   package: graphql
@@ -1553,7 +1553,7 @@ export XBIT_AGENT_ENV="$ENV"
    - Copy environment files (`env/*.env`)
    - Copy scripts (`scripts/*.sh`)
    - Copy Dockerfile and docker-compose.yml
-
+/**/
 3. **Update Module References**
    - Replace `your-project` with your actual module name in all Go files
    - Update import paths throughout the codebase
